@@ -1,0 +1,388 @@
+Replace your entire `scoreboard.html` with this complete file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park League - Scoreboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.94)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1974&auto=format&fit=crop");
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+    background:rgba(0,0,0,0.45);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:42px;
+    letter-spacing:4px;
+    color:#00ff88;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+}
+
+.nav-links a:hover{
+    color:#00ff88;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#00ff88;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.active{
+    color:#00ff88 !important;
+}
+
+.active::after{
+    width:100% !important;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+header h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:80px;
+    letter-spacing:6px;
+    color:#00ff88;
+    text-shadow:0 0 25px rgba(0,255,136,0.4);
+}
+
+.sub{
+    color:#cfcfcf;
+    margin-top:10px;
+}
+
+/* TEAM TITLES */
+
+.team-title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:55px;
+    color:#00ff88;
+    text-align:center;
+    margin:60px 0 30px;
+    letter-spacing:4px;
+}
+
+/* TABLE */
+
+.table-box{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,255,136,0.12);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#00ff88;
+    color:black;
+    padding:18px;
+    font-size:17px;
+}
+
+td{
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+tr:hover{
+    background:rgba(255,255,255,0.05);
+}
+
+/* TOP 3 */
+
+.gold{
+    color:gold;
+    font-weight:bold;
+    box-shadow:inset 0 0 0 2px gold;
+}
+
+.silver{
+    color:silver;
+    font-weight:bold;
+    box-shadow:inset 0 0 0 2px silver;
+}
+
+.bronze{
+    color:#cd7f32;
+    font-weight:bold;
+    box-shadow:inset 0 0 0 2px #cd7f32;
+}
+
+.points{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.space{
+    height:100px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        padding:25px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    header h1{
+        font-size:55px;
+    }
+
+    .team-title{
+        font-size:40px;
+    }
+
+    th,td{
+        font-size:14px;
+        padding:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">PARK LEAGUE</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="scoreboard.html" class="active">Scoreboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="Goal.html">Golden Boot</a>
+    </div>
+</nav>
+
+<header>
+    <h1>SCOREBOARD</h1>
+    <p class="sub">Goals = 100 pts | Assists = 50 pts | Saves = 25 pts</p>
+</header>
+
+<!-- TEAM GENZ -->
+
+<h2 class="team-title">TEAM GENZ</h2>
+
+<div class="table-box">
+<table>
+
+<tr>
+    <th>Rank</th>
+    <th>Player</th>
+    <th>Goals ⚽</th>
+    <th>Assists 🎯</th>
+    <th>Saves 🧤</th>
+    <th>Points</th>
+</tr>
+
+<tr class="gold">
+    <td>👑 1</td>
+    <td>Harshit</td>
+    <td>3</td>
+    <td>1</td>
+    <td>0</td>
+    <td class="points">350</td>
+</tr>
+
+<tr class="silver">
+    <td>🥈 2</td>
+    <td>Veer</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td class="points">150</td>
+</tr>
+
+<tr class="bronze">
+    <td>🥉 3</td>
+    <td>Aryan</td>
+    <td>0</td>
+    <td>2</td>
+    <td>0</td>
+    <td class="points">100</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Hardik</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td>50</td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Krish</td>
+    <td>0</td>
+    <td>1</td>
+    <td>0</td>
+    <td>25</td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Vansh</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+    <td>0</td>
+</tr>
+
+</table>
+</div>
+
+<div class="space"></div>
+
+<!-- TEAM BOOMERS -->
+
+<h2 class="team-title">TEAM BOOMERS</h2>
+
+<div class="table-box">
+<table>
+
+<tr>
+    <th>Rank</th>
+    <th>Player</th>
+    <th>Goals ⚽</th>
+    <th>Assists 🎯</th>
+    <th>Saves 🧤</th>
+    <th>Points</th>
+</tr>
+
+<tr class="gold">
+    <td>👑 1</td>
+    <td>Sharad</td>
+    <td>3</td>
+    <td>1</td>
+    <td>0</td>
+    <td class="points">350</td>
+</tr>
+
+<tr class="silver">
+    <td>🥈 2</td>
+    <td>Manak</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td class="points">300</td>
+</tr>
+
+<tr class="bronze">
+    <td>🥉 3</td>
+    <td>Money</td>
+    <td>1</td>
+    <td>3</td>
+    <td>0</td>
+    <td class="points">250</td>
+</tr>
+
+<tr>
+    <td>4</td>
+    <td>Krishna</td>
+    <td>1</td>
+    <td>2</td>
+    <td>1</td>
+    <td>225</td>
+</tr>
+
+<tr>
+    <td>5</td>
+    <td>Anad</td>
+    <td>1</td>
+    <td>0</td>
+    <td>4</td>
+    <td>200</td>
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>Vyom</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td>25</td>
+</tr>
+
+</table>
+</div>
+
+<div class="space"></div>
+
+</body>
+</html>
+```

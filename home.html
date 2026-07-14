@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park League - Home</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:
+    linear-gradient(rgba(0,0,0,0.82),rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1974&auto=format&fit=crop");
+    background-size:cover;
+    background-position:center;
+    min-height:100vh;
+    color:white;
+}
+
+/* Navbar */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:45px;
+    letter-spacing:4px;
+    color:#00ff95;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#00ff95;
+    transform:translateY(-3px);
+}
+
+/* Team label */
+
+.team-tag{
+    margin-left:65px;
+    margin-top:25px;
+    display:inline-block;
+    transform:rotate(-10deg);
+    font-family:'Bebas Neue',sans-serif;
+    font-size:30px;
+    color:#00ff95;
+    letter-spacing:2px;
+}
+
+/* Main */
+
+.container{
+    width:90%;
+    margin:auto;
+    text-align:center;
+    padding-top:50px;
+}
+
+.title{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:95px;
+    letter-spacing:5px;
+    text-shadow:
+    0 0 15px #00ff95,
+    0 0 35px #00ff95;
+    animation:fadeIn 1.5s;
+}
+
+.subtitle{
+    color:#cfcfcf;
+    margin-top:10px;
+    font-size:18px;
+}
+
+.match-card{
+    margin-top:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:80px;
+    flex-wrap:wrap;
+}
+
+/* Team Cards */
+
+.team{
+    width:330px;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+    padding:35px;
+    transition:0.4s;
+    box-shadow:0 0 25px rgba(0,255,149,0.08);
+}
+
+.team:hover{
+    transform:translateY(-12px);
+    box-shadow:0 0 30px rgba(0,255,149,0.25);
+}
+
+.team h2{
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:3px;
+    font-size:40px;
+    margin-bottom:25px;
+    color:#00ff95;
+}
+
+.team ul{
+    list-style:none;
+}
+
+.team li{
+    padding:10px;
+    font-size:19px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+
+/* VS */
+
+.vs{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:90px;
+    color:#00ff95;
+    text-shadow:
+    0 0 20px #00ff95,
+    0 0 40px #00ff95;
+    animation:pulse 2s infinite;
+}
+
+.footer-text{
+    margin-top:70px;
+    color:#bdbdbd;
+    font-size:15px;
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        padding:25px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .title{
+        font-size:60px;
+    }
+
+    .vs{
+        font-size:65px;
+    }
+
+    .team{
+        width:95%;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">PARK LEAGUE</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="scoreboard.html">Scoreboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="goal.html">Golden Boot</a>
+    </div>
+</nav>
+
+<div class="team-tag">
+    TEAM
+</div>
+
+<div class="container">
+
+    <h1 class="title">Generational Disaster!</h1>
+    <p class="subtitle">
+        The ultimate battle between Team GenZ and Team Boomers.
+    </p>
+
+    <div class="match-card">
+
+        <div class="team">
+            <h2>TEAM GENZ</h2>
+
+            <ul>
+                <li>1. Harshit</li>
+                <li>2. Krish</li>
+                <li>3. Veer</li>
+                <li>4. Aryan</li>
+                <li>5. Hardik</li>
+                <li>6. Vansh</li>
+            </ul>
+        </div>
+
+        <div class="vs">
+            VS
+        </div>
+
+        <div class="team">
+            <h2>TEAM BOOMERS</h2>
+
+            <ul>
+                <li>1. Sharad</li>
+                <li>2. Money</li>
+                <li>3. Manak</li>
+                <li>4. Anad</li>
+                <li>5. Krishna</li>
+                <li>6. Vyom</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-text">
+        ⚽ One Park. Two Generations. Infinite Banter.
+    </div>
+
+</div>
+
+</body>
+</html>

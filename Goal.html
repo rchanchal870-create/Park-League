@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park League - Golden Boot</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1974&auto=format&fit=crop");
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* INTRO SCREEN */
+
+.intro{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1s;
+}
+
+.intro-name{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:10vw;
+    color:white;
+    transform:rotate(-12deg);
+    letter-spacing:10px;
+    text-shadow:
+        0 0 20px white,
+        0 0 50px rgba(255,255,255,.4);
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:42px;
+    color:gold;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.active{
+    color:gold;
+}
+
+/* HERO CARD */
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:90px;
+    color:gold;
+    letter-spacing:5px;
+    text-shadow:
+        0 0 20px gold,
+        0 0 50px rgba(255,215,0,.5);
+}
+
+.hero p{
+    color:#d8d8d8;
+    margin-top:15px;
+}
+
+.top-card{
+    width:90%;
+    max-width:700px;
+    margin:40px auto;
+    background:rgba(255,215,0,.08);
+    border:2px solid gold;
+    border-radius:30px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 0 40px rgba(255,215,0,.25);
+}
+
+.top-card h2{
+    font-size:80px;
+    color:gold;
+}
+
+.top-card h3{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:55px;
+    letter-spacing:4px;
+    margin-top:15px;
+}
+
+.top-card p{
+    margin-top:15px;
+    font-size:20px;
+}
+
+/* TABLE */
+
+.table-box{
+    width:92%;
+    max-width:1100px;
+    margin:60px auto;
+    background:rgba(255,255,255,.05);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(15px);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:gold;
+    color:black;
+    padding:18px;
+}
+
+td{
+    text-align:center;
+    padding:18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tr:hover{
+    background:rgba(255,255,255,.05);
+}
+
+.gold{
+    color:gold;
+    font-weight:bold;
+}
+
+.silver{
+    color:silver;
+    font-weight:bold;
+}
+
+.bronze{
+    color:#cd7f32;
+    font-weight:bold;
+}
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        padding:25px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .top-card h3{
+        font-size:38px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Intro -->
+<div class="intro">
+    <div class="intro-name" id="introName">
+        HARSHIT
+    </div>
+</div>
+
+<!-- Navbar -->
+
+<nav>
+    <div class="logo">GOLDEN BOOT</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="scoreboard.html">Scoreboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="goldenboot.html" class="active">Golden Boot</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>GOLDEN BOOT</h1>
+    <p>The Deadliest Finishers of Park League</p>
+</section>
+
+<div class="top-card">
+    <h2>🏆</h2>
+    <h3>JOINT TOP SCORERS</h3>
+    <p>Harshit • Sharad • Manak</p>
+    <p>3 Goals Each</p>
+</div>
+
+<div class="table-box">
+
+<table>
+
+<tr>
+    <th>Rank</th>
+    <th>Player</th>
+    <th>Team</th>
+    <th>Goals</th>
+</tr>
+
+<tr class="gold">
+    <td>👑 1</td>
+    <td>Harshit</td>
+    <td>Team Genz</td>
+    <td>3</td>
+</tr>
+
+<tr class="gold">
+    <td>👑 1</td>
+    <td>Sharad</td>
+    <td>Team Boomers</td>
+    <td>3</td>
+</tr>
+
+<tr class="gold">
+    <td>👑 1</td>
+    <td>Manak</td>
+    <td>Team Boomers</td>
+    <td>3</td>
+</tr>
+
+<tr class="silver">
+    <td>2</td>
+    <td>Money</td>
+    <td>Team Boomers</td>
+    <td>1</td>
+</tr>
+
+<tr class="silver">
+    <td>2</td>
+    <td>Veer</td>
+    <td>Team Genz</td>
+    <td>1</td>
+</tr>
+
+<tr class="silver">
+    <td>2</td>
+    <td>Anad</td>
+    <td>Team Boomers</td>
+    <td>1</td>
+</tr>
+
+<tr class="silver">
+    <td>2</td>
+    <td>Krishna</td>
+    <td>Team Boomers</td>
+    <td>1</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Aryan</td>
+    <td>Team Genz</td>
+    <td>0</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Hardik</td>
+    <td>Team Genz</td>
+    <td>0</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Krish</td>
+    <td>Team Genz</td>
+    <td>0</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Vansh</td>
+    <td>Team Genz</td>
+    <td>0</td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>Vyom</td>
+    <td>Team Boomers</td>
+    <td>0</td>
+</tr>
+
+</table>
+
+</div>
+
+<script>
+const names = ["HARSHIT", "SHARAD", "MANAK"];
+const text = document.getElementById("introName");
+
+let i = 0;
+
+const interval = setInterval(() => {
+    i++;
+    if(i < names.length){
+        text.textContent = names[i];
+    }
+}, 500);
+
+setTimeout(() => {
+    clearInterval(interval);
+
+    const intro = document.querySelector(".intro");
+    intro.style.opacity = "0";
+
+    setTimeout(() => {
+        intro.style.display = "none";
+    }, 1000);
+
+}, 1500);
+</script>
+
+</body>
+</html>

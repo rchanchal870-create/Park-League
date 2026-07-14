@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park League - Matches</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,.88),rgba(0,0,0,.95)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1974&auto=format&fit=crop");
+    background-size:cover;
+    background-attachment:fixed;
+    color:white;
+}
+
+/* NAVBAR */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 60px;
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(15px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:42px;
+    color:#00ff88;
+    letter-spacing:4px;
+}
+
+.nav-links{
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.active{
+    color:#00ff88;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:90px;
+    letter-spacing:5px;
+    color:#00ff88;
+    text-shadow:0 0 25px rgba(0,255,136,.4);
+}
+
+header p{
+    color:#cfcfcf;
+    margin-top:10px;
+}
+
+/* TABLE */
+
+.table-box{
+    width:92%;
+    max-width:1300px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(0,255,136,.12);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#00ff88;
+    color:black;
+    padding:18px;
+}
+
+td{
+    text-align:center;
+    padding:25px 18px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+tr:hover{
+    background:rgba(255,255,255,.05);
+}
+
+.score{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:42px;
+    color:#00ff88;
+    letter-spacing:4px;
+}
+
+.team{
+    font-weight:bold;
+}
+
+.empty{
+    color:#8c8c8c;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+        padding:25px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    header h1{
+        font-size:60px;
+    }
+
+    th,td{
+        font-size:13px;
+        padding:14px;
+    }
+
+    .score{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">PARK LEAGUE</div>
+
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="scoreboard.html">Scoreboard</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="Goal.html">Golden Boot</a>
+        <a href="matches.html" class="active">Matches</a>
+    </div>
+</nav>
+
+<header>
+    <h1>MATCHES</h1>
+    <p>Park League Match History</p>
+</header>
+
+<div class="table-box">
+
+<table>
+
+<tr>
+    <th>Match</th>
+    <th>Teams</th>
+    <th>Score</th>
+    <th>Date</th>
+    <th>MOTM</th>
+</tr>
+
+<tr>
+    <td>Match 1</td>
+    <td class="team">Team Genz vs Team Boomers</td>
+    <td class="score">4 - 8</td>
+    <td class="empty">PATA NHI</td>
+    <td class="empty">SHARAD</td>
+</tr>
+
+<tr>
+    <td>Match 2</td>
+    <td class="team">Team Genz vs Team Boomers</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+</tr>
+
+<tr>
+    <td>Match 3</td>
+    <td class="team">Team Genz vs Team Boomers</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+</tr>
+
+<tr>
+    <td>Match 4</td>
+    <td class="team">Team Genz vs Team Boomers</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+</tr>
+
+<tr>
+    <td>Match 5</td>
+    <td class="team">Team Genz vs Team Boomers</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+    <td class="empty">—</td>
+</tr>
+
+</table>
+
+</div>
+
+</body>
+</html>
